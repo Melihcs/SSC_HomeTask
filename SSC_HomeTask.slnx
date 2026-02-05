@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="TextFilter.App/TextFilter.App.csproj" />
+  <Project Path="TextFilter.Core/TextFilter.Core.csproj" />
+  <Project Path="TextFilter.Tests/TextFilter.Tests.csproj" />
+</Solution>
