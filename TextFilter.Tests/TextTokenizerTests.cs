@@ -22,13 +22,15 @@ public class TextTokenizerTests
     public void TokenizeWithPositions_ExtractsWordsAndPositions()
     {
         var tokenizer = new TextTokenizer();
-        var text = "Don't stop 123 now.";
+        var text = "Don't stop num1ber now.";
 
         var tokens = tokenizer.TokenizeWithPositions(text);
 
-        Assert.AreEqual(3, tokens.Count);
+        Assert.AreEqual(5, tokens.Count);
         Assert.AreEqual(new WordToken("Don't", 0, 5), tokens[0]);
         Assert.AreEqual(new WordToken("stop", 6, 4), tokens[1]);
-        Assert.AreEqual(new WordToken("now", 15, 3), tokens[2]);
+        Assert.AreEqual(new WordToken("num", 11, 3), tokens[2]);
+        Assert.AreEqual(new WordToken("ber", 15, 3), tokens[3]);
+        Assert.AreEqual(new WordToken("now", 19, 3), tokens[4]);
     }
 }
